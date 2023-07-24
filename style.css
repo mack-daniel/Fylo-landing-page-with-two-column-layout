@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+}
+.container {
+  padding: 2% 5%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+nav .container,
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar li {
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  font-family: "Open sans", sans-serif;
+}
+.row,
+footer .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  flex: 1;
+  padding: 1rem;
+}
+.col img {
+  height: 100%;
+  width: 100%;
+}
+.col h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+.col p {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  margin: 20px 0;
+  font-weight: 400;
+}
+.form-group {
+  display: flex;
+  gap: 20px;
+}
+.form-group input {
+  width: 50%;
+}
+input {
+  padding: 1rem 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #000;
+}
+input::placeholder {
+  color: var(--light-gray);
+}
+.btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+}
+.btn-primary {
+  background-color: var(--bright-blue);
+  border: 0;
+  color: var(--light-grayish-blue);
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  opacity: 0.5;
+}
+.tag-link {
+  justify-content: left;
+  gap: 10px;
+  border-bottom: 1px solid var(--moderate-cyan);
+  color: var(--moderate-cyan);
+  width: 35%;
+  font-family: "Open sans", sans-serif;
+}
+.tag-link img,
+.card-testimonial img {
+  height: 30px;
+  width: 30px;
+}
+.card-testimonial {
+  padding: 20px 10px;
+  margin-top: 20px;
+  height: 15rem;
+  width: 30rem;
+  border-radius: 10px;
+  box-shadow: 2px 1px 17px -5px var(--light-gray);
+  -webkit-box-shadow: 2px 1px 17px -5px var(--light-gray);
+  -moz-box-shadow: 2px 1px 17px -5px var(--light-gray);
+}
+.card-testimonial .profile {
+  justify-content: left;
+  gap: 10px;
+}
+.card-testimonial .profile img {
+  border-radius: 50%;
+}
+.card-testimonial .profile p {
+  margin: 0;
+}
+.light-bg {
+  background-color: var(--desaturated-blue);
+  color: var(--light-grayish-blue);
+}
+.light-bg h2 {
+  color: var(--light-grayish-blue);
+}
+.light-bg input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: var(--very-dark-blue);
+  color: var(--light-gray);
+}
+footer .social-icon {
+  color: var(--light-gray);
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 20px;
+  border: 1px solid var(--light-gray);
+}
+footer .social-icon:hover {
+  border: 1px solid var(--bright-blue);
+  color: var(--bright-blue);
+}
+footer .row {
+  align-items: start;
+  gap: 20px;
+}
+footer .row .col:last-child {
+  display: flex;
+  align-items: center;
+}
+footer .row li {
+  margin: 20px 0;
+  font-family: "Open sans", sans-serif;
+}
+footer .row li a {
+  color: var(--light-gray);
+}
+footer .row li a:hover {
+  color: var(--bright-blue);
+}
+footer .row img {
+  margin-right: 20px;
+}
+footer .row img,
+footer .social-icon {
+  height: 20px;
+  width: 20px;
+}
+@media (max-width: 991px) {
+  .navbar li {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-family: "Open sans", sans-serif;
+  }
+  .row,
+  .form-group {
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-group input {
+    width: 100%;
+  }
+  .tag-link {
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .card-testimonial {
+    width: 100%;
+    height: 100%;
+  }
+  footer .col {
+    width: 100%;
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 2%;
+  }
+
+  footer .row .col:last-child {
+    justify-content: center;
+  }
+}
+@media (max-width: 438px) {
+  nav .container {
+    flex-direction: column;
+  }
+}
